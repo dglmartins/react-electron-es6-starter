@@ -4,7 +4,9 @@
   "description": "A minimal Electron with React and ES6 application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dev": "electron . --debug",
+    "package:mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/app-icon/mac/app-icon.icns --out=release-builds"
   },
   "repository": "https://github.com/dglmartins/react-electron-es6-starter.git",
   "keywords": [
