@@ -1,45 +1,43 @@
-# electron-quick-start
+# electron-react-redux-es6-spread-class-properties-quick-start
 
-**Clone and run for a quick way to see Electron in action.**
+**Clone and run for a quick way to see Electron with react-redux-es6 in action.**
 
-This is a minimal Electron application based on the [Quick Start Guide](http://electron.atom.io/docs/tutorial/quick-start) within the Electron documentation.
+This is built on top of electrons quick start guide for minimal Electron application, connecting it with React and Redux. It compiles on the fly with babel-register without other configuration. Checkout (http://electron.atom.io/docs) for extra Electron documentation.
 
-**Use this app along with the [Electron API Demos](http://electron.atom.io/#get-started) app for API code examples to help you get started.**
+Develop your React + Redux app in /src folder.
 
-A basic Electron application needs just these files:
+Built in support for es6, class properties transformations (class arrow function definitions), spread operators (such as in redux store) and dev tools with npm run dev.
 
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
+No support for certain things which would come with create-react-app (for example, `import './App.css'` would not work, instead you would link the css in index.html (for example `<link rel="stylesheet" href="./src/App.css">`). Another example is the lack of file-loader which would work in create-react-app. (for example, `import logo from './logo.svg'` would not work in a component, instead you would add the image path in the src `<img src="./src/logo.svg" className="App-logo" alt="logo" />`)
 
-You can learn more about each of these components within the [Quick Start Guide](http://electron.atom.io/docs/tutorial/quick-start).
+To add react and redux dev tools extensions on chrome:
+
+1) Find the paths of the ids of the extensions and the version on chrome. (details @ https://electron.atom.io/docs/tutorial/devtools-extension/).
+
+2) Once you know the id and version of an extension on chrome, go to main.js and in app.on('ready'), uncomment example provided in BrowserWindow.addDevToolsExtension and replace the path passed to the function with the correct path for you. The paths currently there are just examples!
+
+You can learn more about Electron components within Electron's [Quick Start Guide](http://electron.atom.io/docs/tutorial/quick-start).
 
 ## To Use
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer.
 
-```bash
-# Clone this repository
-git clone https://github.com/electron/electron-quick-start
-# Go into the repository
-cd electron-quick-start
-# Install dependencies
+Fork and clone, then
+
 npm install
 # Run the app
 npm start
-```
 
-Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
+or # Run the app with devtools
 
-## Resources for Learning Electron
+npm run dev
 
-- [electron.atom.io/docs](http://electron.atom.io/docs) - all of Electron's documentation
-- [electron.atom.io/community/#boilerplates](http://electron.atom.io/community/#boilerplates) - sample starter apps created by the community
-- [electron/electron-quick-start](https://github.com/electron/electron-quick-start) - a very basic starter Electron app
-- [electron/simple-samples](https://github.com/electron/simple-samples) - small applications with ideas for taking them further
-- [electron/electron-api-demos](https://github.com/electron/electron-api-demos) - an Electron app that teaches you how to use Electron
-- [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
+to build a mac package:
 
-## License
+npm run package:mac
 
-[CC0 1.0 (Public Domain)](LICENSE.md)
+## Resources
+
+- (http://electron.atom.io/) - Electron'
+- (https://reactjs.org/docs/hello-world.html) - React
+- (http://redux.js.org/) - Redux
