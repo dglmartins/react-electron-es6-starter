@@ -6,11 +6,11 @@
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/dglmartins/react-electron-es6-starter.git",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
+    "react",
+    "redux",
     "tutorial",
     "demo"
   ],
